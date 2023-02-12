@@ -14,9 +14,6 @@ Create a function that will calculate the sum of two numbers. Call it sum_two.
 # def sum_two(a,b):
 #     return a+b
 
-
-
-
 '''
 Question 2
 Write a function that performs multiplication of two arguments. By default the
@@ -27,7 +24,6 @@ function should multiply the first argument by 2. Call it multiply.
 
 # print(multiply(5,6))
 # print(multiply(5))
-
 
 
 '''
@@ -62,7 +58,7 @@ the screen.
 # '''
 
 # with open('capitals.txt', 'a') as f:
-#     f.write(input('Enter a capital name:\n>>> '))
+#     f.write('\n' + input('Enter a capital name:\n>>> '))
     
 # with open('capitals.txt', 'r') as f:
 #     print(f.read())
@@ -74,9 +70,12 @@ the screen.
 # Question 6
 # Write a function that will copy the contents of one file to a new file.
 # '''
-with open('capitals.txt', 'r') as f:
-    with open('capitals_2.txt', 'w') as g:
-        g.write(f.read())
+def copy_file(infile, outfile):
+    with open(infile, 'r') as f:
+        with open(outfile, 'w') as g:
+            g.write(f.read())
+            
+copy_file('capitals.txt', 'capitals_2.txt')
         
         
 
